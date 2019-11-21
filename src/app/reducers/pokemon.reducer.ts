@@ -12,8 +12,6 @@ export const  vibilityFilter=(state='SHOW_ALL', action)=>{
 }
 
 export const allPokemons=(state=[],action)=>{
- console.log("action ", action);
- console.log("state ", state);
     switch (action.type) {
         case 'ADD_ITEM':
             return state=[...state,action.Pokemon]

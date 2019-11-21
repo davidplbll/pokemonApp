@@ -1,5 +1,5 @@
 <div class="content">
-    <mat-card *ngFor="let pokemon of pokemones" class="card" (click)="selectPokemon(pokemon)">
+    <mat-card *ngFor="let pokemon of list | async" class="card" (click)="selectPokemon(pokemon)">
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>{{pokemon.name}}</mat-card-title>

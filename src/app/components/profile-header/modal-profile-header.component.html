@@ -1,0 +1,7 @@
+<h3>{{user.name}}</h3>
+<div class="avatar-image avatar-big"  [ngStyle]="{'background-image': 'url('+user.photo+')'}" >
+</div>
+<div style="margin-top:20px">
+        <button mat-stroked-button color="primary" (click)="cerrarsesion()">Cerrar sesion</button>
+        <button mat-stroked-button style="margin-top:10px" (click)="gotoFavorite()" color="primary">Mis pokemones</button>
+</div>

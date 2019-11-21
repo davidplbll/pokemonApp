@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home.component';
-import {HomeRoutingModule} from './home-routing.module'
+import { FavoriteComponent } from './favorite.component';
+import {FavoriteRoutingModule} from './favorite-routing.module'
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
-import {PokemonInfoComponent,PokemonInfoModule} from './../../components'
+import {PokemonInfoComponent,PokemonInfoModule} from '../../components'
 import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [FavoriteComponent],
   imports: [
     CommonModule,
     PokemonInfoModule,MatDialogModule,
-    HomeRoutingModule,MatButtonModule,
+    FavoriteRoutingModule,MatButtonModule,
     MatCardModule],
-  exports:[HomeComponent],
+  exports:[FavoriteComponent],
   entryComponents:[PokemonInfoComponent]
 })
-export class HomeModule { }
+export class FavoriteModule { }

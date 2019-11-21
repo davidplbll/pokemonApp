@@ -1,0 +1,3 @@
+<button mat-raised-button color="primary" (click)="fb.FacebookAuth()" *ngIf="!fb.user">Ingresar con Facebook <i class="fab fa-facebook-f"></i></button>
+<div (click)="openDialog()" class="avatar-image"  [ngStyle]="{'background-image': 'url('+fb.user.photo+')'}" 
+        *ngIf="fb.user"></div>

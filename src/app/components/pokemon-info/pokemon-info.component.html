@@ -1,0 +1,21 @@
+<mat-card *ngIf="PokemonData" class="card" >
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{PokemonData.name}}</mat-card-title>
+        </mat-card-header>
+        <div class="containe-img" >
+          <img src="{{PokemonData.sprites.back_default}}" alt="{{PokemonData.name}}">
+          <img src="{{PokemonData.sprites.front_default}}" alt="{{PokemonData.name}}">
+          <img *ngIf="PokemonData.sprites.back_shiny" src="{{PokemonData.sprites.back_shiny}}" alt="{{PokemonData.name}}">
+          <img *ngIf="PokemonData.sprites.front_shiny" src="{{PokemonData.sprites.front_shiny}}" alt="{{PokemonData.name}}">
+        </div>
+        <h3>abilities</h3>
+        <div>
+            <p *ngFor="let ability of PokemonData.abilities ">{{ability.name}}</p>
+        </div>
+        <mat-card-actions >
+          <button *ngIf="fb.user" mat-raised-button (click)="agregarFavoritos(PokemonData)" color="primary">Agregar a favoritos<i class="far fa-heart"></i></button>
+          <button mat-raised-button color="primary" (click)="fb.FacebookAuth()" *ngIf="!fb.user">Ingresar Para guardar favorito <i class="fab fa-facebook-f"></i></button>
+
+        </mat-card-actions>
+</mat-card>

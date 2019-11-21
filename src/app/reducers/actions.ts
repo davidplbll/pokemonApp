@@ -1,5 +1,4 @@
 export const addItem=Pokemon=>{
- console.log("Pokemon ", Pokemon);
     return{
         type:"ADD_ITEM",
         Pokemon
